@@ -1,0 +1,20 @@
+# Wireshark Filters Used
+
+## DNS
+- `dns`
+  - Shows DNS queries/responses (useful for spotting unusual domains)
+
+## HTTP (unencrypted web traffic)
+- `http`
+  - Shows HTTP traffic (unencrypted) where content/requests can be visible
+
+## TCP basics
+- `tcp`
+  - Shows all TCP packets
+
+## TCP retransmissions (possible packet loss / network issues)
+- `tcp.analysis.retransmission`
+
+## Conversations / talkers (optional notes)
+- Use: Statistics → Conversations
+- Helps identify top IPs communicating during capture

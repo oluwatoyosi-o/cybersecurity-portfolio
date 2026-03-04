@@ -1,0 +1,41 @@
+# Findings & Security Notes
+
+## 1) DNS Activity
+**What I observed**
+- Normal DNS queries for common services/websites.
+- DNS is often readable by network observers unless encrypted DNS is used.
+
+**Why it matters**
+- DNS can reveal what domains a device is trying to reach.
+- Suspicious or random-looking domains can sometimes be a red flag.
+
+**Mitigation**
+- Use secure DNS options where appropriate (e.g., DNS over HTTPS if supported).
+- Monitor DNS logs in enterprise environments.
+
+---
+
+## 2) HTTP (Unencrypted) Traffic
+**What I observed**
+- Instances of HTTP traffic (not HTTPS).
+
+**Why it matters**
+- HTTP is unencrypted. Someone on the same network could potentially view requests/content.
+
+**Mitigation**
+- Prefer HTTPS websites/services.
+- Enforce HTTPS where possible (HSTS, secure configurations).
+
+---
+
+## 3) TCP Behavior
+**What I observed**
+- Standard TCP sessions, plus occasional retransmissions.
+
+**Why it matters**
+- Retransmissions can indicate packet loss or network instability.
+- In a security context, unusual connection patterns can also be worth investigating.
+
+**Mitigation**
+- For performance: check Wi-Fi strength, congestion, or physical issues.
+- For security monitoring: baseline “normal” traffic and alert on anomalies.
