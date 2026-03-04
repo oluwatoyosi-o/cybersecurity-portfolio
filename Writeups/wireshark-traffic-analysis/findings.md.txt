@@ -39,3 +39,17 @@
 **Mitigation**
 - For performance: check Wi-Fi strength, congestion, or physical issues.
 - For security monitoring: baseline “normal” traffic and alert on anomalies.
+
+Observations
+
+DNS Traffic
+DNS queries show domain resolution requests between the client and DNS servers.
+This demonstrates how domain names are translated into IP addresses.
+
+TCP Traffic
+TCP packets show the connection process between the client and remote servers,
+including SYN and ACK packets used to establish connections.
+
+TLS Traffic
+TLS packets show encrypted communication between the client and web servers.
+Modern websites use TLS to protect data from interception.
